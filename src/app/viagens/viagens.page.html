@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Viagens</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let viagem of viagens">
+    <img src="{{ viagem.img }}" />
+    <ion-card-header>
+      <ion-card-title>{{ viagem.local}}</ion-card-title>
+      <ion-card-subtitle>{{ viagem.data}}</ion-card-subtitle>      
+    </ion-card-header>
+    <ion-card-content>
+      {{ viagem.descricao }}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
+
